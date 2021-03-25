@@ -1,38 +1,346 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+.homecontainer{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/back.jpg);
+	background-position: center;
+	background-size: cover;
+	padding-left: 8%;
+	padding-right: 8%;
+	box-sizing: border-box;
+}
+.navbar{
+  color: #fff;
+	height: 12%;
+	display: flex;
+	align-items: center;
+}
+.logo a{
+	width: 150px;
+  color: #fff;
+  font-size: 20px;
+}
+.logo a:hover{
+  color: aqua;
+}
+/* body{
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/back.jpg);
+	background-position: center;
+	background-size: cover;
+	padding-left: 8%;
+	padding-right: 8%;
+	box-sizing: border-box;
+} */
+nav{
+	flex: 1;
+	text-align: right;
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin-left:60px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-size: 13px;
+}
+.row{
+	display: flex;
+	height: 88%;
+	align-items: center;
+}
+.col{
+	flex-basis: 50%;
+  margin-top: 20px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+	color: #fff;
+	font-size: 50px;
+}
+p{
+	color: #fff;
+	font-size: 11px;
+	line-height: 15px;
+}
+.button{
+	width: 180px;
+	color: #000;
+	font-size: 12px;
+	padding: 12px 0;
+	background: #fff;
+	border: 0;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 30px;
+}
+.scard{
+	width: 200px;
+	height: 300px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 15px 25px;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: 10px 45px;
+	transition: transform 0.5;
+	background-position: center;
+	background-size: cover;
+}
+.card1{
+	background-image: url(images/book1.jpg);
+}
+.card2{
+	background-image: url(images/book2.jpg);
+}
+.card3{
+	background-image: url(images/book3.jpg);
+}
+.card4{
+	background-image: url(images/book4.jpg);
+}
+.scard:hover{
+	transform: translateY(-10px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* login from starts */
+.login-form{
+  width: 360px;
+  background: #f1f1f1;
+  height: 580px;
+  padding: 80px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-form h1{
+  color: #de6161;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.txtb{
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 40px 0;
+}
+
+.txtb input{
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.txtb span::before{
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: .5s;
+}
+
+.txtb span::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg,#de6161,#2657eb);
+  transition: .5s;
+}
+
+.focus + span::before{
+  top: -5px;
+}
+.focus + span::after{
+  width: 100%;
+}
+
+.logbtn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: linear-gradient(120deg,#de6161,#2657eb);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.logbtn:hover{
+  background-position: right;
+}
+
+.bottom-text{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* signup form css starts */
+.formcontainer{
+  width: 100%;
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	padding-left: 8%;
+	padding-right: 8%;
+	box-sizing: border-box;
+  background: linear-gradient(120deg,#de6161,#2657eb) ;
+}
+.signup-form{
+  width: 360px;
+  background: #f1f1f1;
+  height: 650px;
+  padding: 80px 20px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.signup-form h1{
+  color: #de6161;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.bottom-stext{
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.txtr{
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 15px 0;
+}
+
+.txtr input{
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.txtr span::before{
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: .5s;
+}
+
+.txtr span::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg,#de6161,#2657eb);
+  transition: .5s;
+}
+.sigbtn{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: linear-gradient(120deg,#de6161,#2657eb);
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.sigbtn:hover{
+  background-position: right;
+}
+/* signup form css ends */
+
+/* book css starts */
+
+#product{
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.gcard{
+  min-width: 300px;
+  min-height: 550px;
+  max-width: 200px;
+  max-height: 400px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  padding: 10px;
+  box-shadow: 2px 8px 20px #ddd;
+  margin: 10px;
+  transition: 0.5s linear;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gcard:hover{
+  box-shadow: none;
 }
+.content img{
+  max-width: 300px;
+  width: 100%;
+  height: 100%;
+  max-height: 300px;
+  display: block;
+  box-shadow: 2px 8px 20px #ddd;
+  object-fit: cover;
+}
+.gcard h4{
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+.gcard span{
+  color: #000;
+}
+.gcard h5{
+  color: #de6161;
+}
+.gcard button{
+  border: none;
+  outline: none;
+  background: #333;
+  color: #ddd;
+  width: 100%;
+  height: 40px;
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 15px 0;
+}
+ 
