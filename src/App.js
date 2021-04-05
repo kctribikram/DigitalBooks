@@ -9,6 +9,8 @@ import Login from './Container/Login';
 import Register from './Container/Register';
 import Book from './Container/Book'
 import Update from './Container/Update';
+import BookDetail from "./Container/BookDetail"
+import AddBook from './Container/AddBook';
 
 
 
@@ -17,10 +19,13 @@ function App() {
     <Router>
       <Switch>
         <Route path='/' component={Home} exact/>
+        <Route path='/home' component={Home} exact/>
         <Route path='/book' component={Book} exact/>
         <Route path='/login' component={Login} exact/>
         <Route path='/register' component={Register} exact/>
         <Route path='/update' component={Update} exact/>
+        <Route path='/bookdetail/:id' component={BookDetail} exact/>
+        <Route path='/addbook' component={AddBook} exact/>
       </Switch>
     </Router>
   );

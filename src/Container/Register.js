@@ -1,5 +1,6 @@
 import { Component } from "react";
 import axios from 'axios';
+import Header from "../Header/Header"
 
 class Register extends Component{
     state={
@@ -29,6 +30,7 @@ class Register extends Component{
     render(){
         return(
             <div class='formcontainer'>
+                <Header></Header>
             <form className="signup-form">
                     <h1>Register</h1>
                 <div class="txtr">
@@ -59,17 +61,6 @@ class Register extends Component{
                     </div>
                 </form>
                 </div>
-            // <div>
-            //     <h1>Signup Page</h1>
-            //     <p>First Name<input type="text" value={this.state.first_name} onChange={(event)=>{this.setState({first_name:event.target.value})}}/></p>
-            //     <p>Last Name<input type="text" value={this.state.last_name} onChange={(event)=>{this.setState({last_name:event.target.value})}}/></p>
-            //     <p>Age<input type="number" value={this.state.age} onChange={(event)=>{this.setState({age:event.target.value})}}/></p>
-            //     <p>Contact<input type="number" value={this.state.contact} onChange={(event)=>{this.setState({contact:event.target.value})}}/></p>
-            //     <p>Email<input type="email" value={this.state.email} onChange={(event)=>{this.setState({email:event.target.value})}}/></p>
-            //     <p>Username<input type="text" value={this.state.Username} onChange={(event)=>{this.setState({Username:event.target.value})}}/></p>
-            //     <p>Password<input type="password" value={this.state.Password} onChange={(event)=>{this.setState({Password:event.target.value})}}/></p>
-            //     <p><button onClick={this.reader}>Signup</button></p>
-            // </div>
         )
     }
 }
