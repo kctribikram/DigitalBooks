@@ -58,7 +58,6 @@ body{
 
 
 
-
 /* nav example */
 
 
@@ -776,6 +775,46 @@ p{
 .trend-item-content h4:last-of-type{
   font-weight: 600;
   font-size: 20px;
+}
+
+.viewtrend{
+  background: #3a6186;
+}
+
+.btnupd{
+  width: 100px;
+	color: #fff;
+	font-size: 12px;
+	padding: 12px 12px;
+	background: #006dbc;
+	border: 0;
+	border-radius: 20px;
+	outline: none;
+}
+.btnupd:hover{
+  background: #de6161;
+  color: #f1f1f1;
+}
+
+.btndle{
+  width: 100px;
+	color: #fff;
+	font-size: 12px;
+	padding: 12px 12px;
+	background: #006dbc;
+	border: 0;
+	border-radius: 20px;
+	outline: none;
+	margin-left: 30px;
+}
+.btndle:hover{
+  background: #de6161;
+  color: #f1f1f1;
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 

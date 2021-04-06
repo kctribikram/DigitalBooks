@@ -30,53 +30,33 @@ class AdminBook extends Component{
     }
     render(){
         return(
-            <div className="bookcontainer">
+            <div class = "viewtrend">
                 <Header></Header>
-            <div id="product">
-            {
-                this.state.book.map((Book) =>{
-                    return(
-                    <div className="gcard">
-                        <div className="content">
-                            <img src={`http://localhost:90/${Book.Image}`}/>                  
+            <div className="bookscontainer">
+                  <div class = "title">
+                      <h3>EXPLORE ALL THE BOOKS</h3>
+                  </div>
+                  <div class = "trend-grid">
+          {
+              this.state.book.map((Book) =>{
+                  return(
+                      <div class = "trend-item">
+                          <div className="bodyimg">
+                              <img src={`http://localhost:90/${Book.Image}`}/>     
+                          </div>                 
+                        <div class = "trend-item-content">
+                          <h3>{Book.Title}</h3>
+                          <h4>{Book.Cost}</h4>
+                          <Link to={'/update/'+Book._id}><button type="button" class="btnupd">Edit</button></Link>
+                            <Link to={'/delete/'+Book._id}><button type="button" class="btndle">Delete</button></Link>
                         </div>
-                        <h4>{Book.Title}</h4>                       
-                        <span>{Book.Auther}</span> 
-                        <h5>{Book.Cost}</h5>
-
-                        <Link to={'/update/'+Book._id}><button type="button" class="btn btn-info">Edit</button></Link>
-                        <Link to={'/delete/'+Book._id}><button type="button" class="btn btn-info">Delete</button></Link>
-                    </div>
-                    )
-                })
-            }
-            </div>
-        </div>
-            // <Container>
-            //     <Row>
-            //         <Col>
-            //         <Route path='/register' component={Register} />
-            //         <Route path='/login' component={Login} />
-            //         </Col>
-            //         <Col>{
-            //             this.state.book.map((Book)=>{
-            //                 return (<div>
-            //                     {
-            //                     Book.Description 
-            //                     }
-            //                     {
-            //                         Book.Title
-            //                     }
-            //                     {
-            //                         Book.Image
-            //                     }    
-            //                      </div>
-            //                     ) 
-            //             })
-            //             }
-            //         </Col>
-            //     </Row>
-            //  </Container>
+                      </div>
+                  )
+              })
+          }
+          </div>
+          </div>
+      </div> 
         )
     }
 }

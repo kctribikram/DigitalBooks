@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 import Footer from "../Footer/Footer";
 
 
-class Book extends Component{
+class Featured extends Component{
     state = {
         book : [],
         config : {
@@ -30,53 +30,33 @@ class Book extends Component{
     }
     render(){
         return(
-            <div className="bookcontainer">
+            <div class = "viewtrend">
                 <Header></Header>
-            <div id="product">
-            {
-                this.state.book.map((Book) =>{
-                    return(
-                    <div className="gcard">
-                        <div className="content">
-                            <img src={`http://localhost:90/${Book.Image}`}/>                  
+            <div className="bookscontainer">
+                  <div class = "title">
+                      <h3>EXPLORE ALL THE BOOKS</h3>
+                  </div>
+                  <div class = "trend-grid">
+          {
+              this.state.book.map((Book) =>{
+                  return(
+                      <div class = "trend-item">
+                          <div className="bodyimg">
+                              <img src={`http://localhost:90/${Book.Image}`}/>     
+                          </div>                 
+                        <div class = "trend-item-content">
+                          <h3>{Book.Title}</h3>
+                          <h4>{Book.Cost}</h4>
+                          <Link to={'/bookdetail/'+Book._id}><button type="button" class="btn btn-info">Read More</button></Link>
                         </div>
-                        <h4>{Book.Title}</h4>                       
-                        <span>{Book.Auther}</span> 
-                        <h5>{Book.Cost}</h5>
-
-                        <Link to={'/bookdetail/'+Book._id}><button type="button" class="btn btn-info">Read More</button></Link>
-                    </div>
-                    )
-                })
-            }
-            </div>
-        </div>
-            // <Container>
-            //     <Row>
-            //         <Col>
-            //         <Route path='/register' component={Register} />
-            //         <Route path='/login' component={Login} />
-            //         </Col>
-            //         <Col>{
-            //             this.state.book.map((Book)=>{
-            //                 return (<div>
-            //                     {
-            //                     Book.Description 
-            //                     }
-            //                     {
-            //                         Book.Title
-            //                     }
-            //                     {
-            //                         Book.Image
-            //                     }    
-            //                      </div>
-            //                     ) 
-            //             })
-            //             }
-            //         </Col>
-            //     </Row>
-            //  </Container>
+                      </div>
+                  )
+              })
+          }
+          </div>
+          </div>
+      </div> 
         )
     }
 }
-export default Book;
+export default Featured;

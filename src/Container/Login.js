@@ -37,7 +37,6 @@ class Login extends Component{
     render(){
         return(
             <div class='formcontainer'>
-                <Header></Header>
                 <form className="login-form">
                     <h1>Login</h1>
                 <div class="txtb">
