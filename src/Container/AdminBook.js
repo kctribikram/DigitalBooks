@@ -9,7 +9,7 @@ import { Link } from "react-router-dom"
 import Footer from "../Footer/Footer";
 
 
-class Book extends Component{
+class AdminBook extends Component{
     state = {
         book : [],
         config : {
@@ -44,7 +44,8 @@ class Book extends Component{
                         <span>{Book.Auther}</span> 
                         <h5>{Book.Cost}</h5>
 
-                        <Link to={'/bookdetail/'+Book._id}><button type="button" class="btn btn-info">Read More</button></Link>
+                        <Link to={'/update/'+Book._id}><button type="button" class="btn btn-info">Edit</button></Link>
+                        <Link to={'/delete/'+Book._id}><button type="button" class="btn btn-info">Delete</button></Link>
                     </div>
                     )
                 })
@@ -79,4 +80,4 @@ class Book extends Component{
         )
     }
 }
-export default Book;
+export default AdminBook;

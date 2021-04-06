@@ -12,7 +12,7 @@ import Update from './Container/Update';
 import BookDetail from "./Container/BookDetail"
 import AddBook from './Container/AddBook';
 import Featured from './Container/Featured';
-
+import AdminBook from './Container/AdminBook';
 
 
 function App() {
@@ -28,6 +28,8 @@ function App() {
         <Route path='/bookdetail/:id' component={BookDetail} exact/>
         <Route path='/addbook' component={AddBook} exact/>
         <Route path='/featured' component={Featured} exact/>
+        <Route path='/adminbook' component={AdminBook} exact/>
+        <Route path='/update/:id' component={Update} exact/>
       </Switch>
     </Router>
   );

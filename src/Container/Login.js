@@ -22,7 +22,7 @@ class Login extends Component{
             console.log(response.data.token)
 
             localStorage.setItem('token', response.data.token)
-               localStorage.setItem('userType', response.data.userType)
+               localStorage.setItem('role', response.data.role)
                this.setState({
                    chkLogin:true
                })

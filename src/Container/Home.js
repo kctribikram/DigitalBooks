@@ -10,11 +10,11 @@ import Featured from "./Featured";
 
 class Home extends Component{
   state = {
-      limit: 0,
+      limit: 5,
       book : [],
       config : {
          headers : {'authorization' : 'Bearer ${localStorage.getItem}'}
-     }
+     } 
   }
   componentDidMount(){
       axios.get("http://localhost:90/book/show")

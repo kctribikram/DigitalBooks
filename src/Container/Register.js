@@ -31,35 +31,34 @@ class Register extends Component{
         return(
             <div class='formcontainer'>
                 <Header></Header>
-            <form className="signup-form">
-                    <h1>Register</h1>
-                <div class="txtr">
-                    <input type="text" value={this.state.first_name} onChange={(event)=>{this.setState({first_name:event.target.value})}} placeholder="First Name"/>
-                </div>
-
-                    <div class="txtr">
-                        <input type="text" value={this.state.last_name} onChange={(event)=>{this.setState({last_name:event.target.value})}} placeholder="Last Name"/>
-                    </div>
-                    <div class="txtr">
-                        <input type="number" value={this.state.age} onChange={(event)=>{this.setState({age:event.target.value})}} placeholder="Age"/>
-                    </div>
-                    <div class="txtr">
-                        <input type="number" value={this.state.contact} onChange={(event)=>{this.setState({contact:event.target.value})}} placeholder="contact"/>
-                    </div>
-                    <div class="txtr">
-                        <input type="email" value={this.state.email} onChange={(event)=>{this.setState({email:event.target.value})}} placeholder="Email"/>
-                    </div>
-                    <div class="txtr">
-                        <input type="text" value={this.state.Username} onChange={(event)=>{this.setState({Username:event.target.value})}} placeholder="Username"/>
-                    </div>
-                    <div class="txtr">
-                        <input type="password" value={this.state.Password} onChange={(event)=>{this.setState({Password:event.target.value})}} placeholder="Password"/>
-                    </div>
-                    <input type="submit" class="sigbtn" onClick={this.reader}></input>
-                    <div class="bottom-stext">
-                        Already have an account? <a href="/login">Login</a>
-                    </div>
-                </form>
+                <form className="signup-form">
+                        <h1>Register</h1>
+                        <div class="txtr">
+                            <input type="text" value={this.state.first_name} onChange={(event)=>{this.setState({first_name:event.target.value})}} placeholder="First Name"/>
+                        </div>
+                        <div class="txtr">
+                            <input type="text" value={this.state.last_name} onChange={(event)=>{this.setState({last_name:event.target.value})}} placeholder="Last Name"/>
+                        </div>
+                        <div class="txtr">
+                            <input type="number" value={this.state.age} onChange={(event)=>{this.setState({age:event.target.value})}} placeholder="Age"/>
+                        </div>
+                        <div class="txtr">
+                            <input type="number" value={this.state.contact} onChange={(event)=>{this.setState({contact:event.target.value})}} placeholder="contact"/>
+                        </div>
+                        <div class="txtr">
+                            <input type="email" value={this.state.email} onChange={(event)=>{this.setState({email:event.target.value})}} placeholder="Email"/>
+                        </div>
+                        <div class="txtr">
+                            <input type="text" value={this.state.Username} onChange={(event)=>{this.setState({Username:event.target.value})}} placeholder="Username"/>
+                        </div>
+                        <div class="txtr">
+                            <input type="password" value={this.state.Password} onChange={(event)=>{this.setState({Password:event.target.value})}} placeholder="Password"/>
+                        </div>
+                        <input type="submit" class="sigbtn" onClick={this.reader}></input>
+                        <div class="bottom-stext">
+                            Already have an account? <a href="/login">Login</a>
+                        </div>
+                    </form>
                 </div>
         )
     }
