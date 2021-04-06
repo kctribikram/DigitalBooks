@@ -11,6 +11,7 @@ import Book from './Container/Book'
 import Update from './Container/Update';
 import BookDetail from "./Container/BookDetail"
 import AddBook from './Container/AddBook';
+import Featured from './Container/Featured';
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/update' component={Update} exact/>
         <Route path='/bookdetail/:id' component={BookDetail} exact/>
         <Route path='/addbook' component={AddBook} exact/>
+        <Route path='/featured' component={Featured} exact/>
       </Switch>
     </Router>
   );
