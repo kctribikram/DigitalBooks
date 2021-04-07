@@ -52,8 +52,6 @@ class BookDetail extends Component{
                             <h3 className="cost">{this.state.Cost}</h3>
                             <button className="button">Add to cart</button>
                         </div>
-                        <button className="btnread">Read</button>
-                        <button className="btnlisten">Listen</button>
                     </div>
                 </div>     
             }
