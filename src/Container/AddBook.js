@@ -25,9 +25,7 @@ class AddProduct extends Component{
     }
     fileHandler = (e)=>{
         this.setState({
-            File : e.target.files[0],
-            Audio : e.target.files[0],
-            Image : e.target.files[0]
+            [e.target.name] : e.target.files[0]
         })
     }
 
@@ -74,13 +72,13 @@ class AddProduct extends Component{
                         <input type="text" name="Language" value={this.state.Language} onChange={this.inputHandler} placeholder="Language"/>     
                     </div>
                     <div class="txta">
-                        <input type="file" name="File" onChange={this.fileHandler} />
+                        <input type="file" name="Image" onChange={this.fileHandler} />
                     </div>     
                     <div class="txta">
                         <input type="file" name="Audio" onChange={this.fileHandler} />
                     </div>  
                     <div class="txta">
-                        <input type="file" name="Image" onChange={this.fileHandler} />
+                        <input type="file" name="File" onChange={this.fileHandler} />
                     </div>                     
                     <input type="submit" class="addbtn" onClick={this.proAddMethod}></input>
                 </form>

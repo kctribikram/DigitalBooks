@@ -16,6 +16,7 @@ import AdminBook from './Container/AdminBook';
 import Profile from './Container/Profile';
 import Read from './Container/Read';
 import ReaderBook from './Container/ReaderBook';
+import Listen from './Container/Listen';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path='/profile' component={Profile} exact/>
         <Route path='/readerbook' component={ReaderBook} exact/>
         <Route path='/read/:id' component={Read} exact/>
+        <Route path='/listen/:id' component={Listen} exact/>
       </Switch>
     </Router>
   );

@@ -35,16 +35,6 @@ class ReaderBook extends Component{
             <div class = "viewtrend">
                 <Header></Header>
             <div className="bookscontainer">
-                {/* <header>
-                    <div class="inner-width">
-                    <div class="menu-icon">
-                    <BiBookAdd className="commonIcons" />
-                    </div>
-                    </div>
-                </header> */}
-                <div className="addicon">
-                <MdAddCircle className="add" onClick={() => {this.props.history.push("/addbook")}}/>
-                </div>
                   <div class = "title">
                       <h3>EXPLORE ALL THE BOOKS</h3>
                   </div>
@@ -60,7 +50,7 @@ class ReaderBook extends Component{
                           <h3>{Book.Title}</h3>
                           <h4>{Book.Cost}</h4>
                           <Link to={'/read/'+Book._id}><button type="button" class="btnupd">Read</button></Link>
-                          <Link to={'/read/'+Book._id}><button type="button" class="btndle">Listen</button></Link>
+                          <Link to={'/listen/'+Book._id}><button type="button" class="btndle">Listen</button></Link>
                         </div>
                       </div>
                   )
