@@ -46,12 +46,14 @@ class BookDetail extends Component{
                     </div>
                     <div className="details">
                         <div className="content">
-                            <h2 className="title">{this.state.Title}</h2>
+                            <h1 className="title">{this.state.Title}</h1>
                             <h4>{this.state.Auther}</h4>
                             <p className="description">{this.state.Description}</p>
                             <h3 className="cost">{this.state.Cost}</h3>
                             <button className="button">Add to cart</button>
                         </div>
+                        <button className="btnread">Read</button>
+                        <button className="btnlisten">Listen</button>
                     </div>
                 </div>     
             }

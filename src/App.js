@@ -13,6 +13,9 @@ import BookDetail from "./Container/BookDetail"
 import AddBook from './Container/AddBook';
 import Featured from './Container/Featured';
 import AdminBook from './Container/AdminBook';
+import Profile from './Container/Profile';
+import Read from './Container/Read';
+import ReaderBook from './Container/ReaderBook';
 
 
 function App() {
@@ -30,6 +33,9 @@ function App() {
         <Route path='/featured' component={Featured} exact/>
         <Route path='/adminbook' component={AdminBook} exact/>
         <Route path='/update/:id' component={Update} exact/>
+        <Route path='/profile' component={Profile} exact/>
+        <Route path='/readerbook' component={ReaderBook} exact/>
+        <Route path='/read/:id' component={Read} exact/>
       </Switch>
     </Router>
   );

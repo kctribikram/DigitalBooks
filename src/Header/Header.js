@@ -29,8 +29,8 @@ class Header extends Component{
               <div class="logo"><a href="/">Digital Books</a></div>
                 <nav>
                   <ul>
-                    <li><a href="/">Watchlist</a></li>
-                    <li><a href="/">Profile</a></li>
+                    <li><a href="/readerbook">Books</a></li>
+                    <li><a href="/profile">Profile</a></li>
                     <li><a href="/" onClick={this.logout}>Logout</a></li>
                   </ul>
                 </nav>

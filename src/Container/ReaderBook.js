@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer";
 import { MdAddCircle } from "react-icons/all";
 
 
-class AdminBook extends Component{
+class ReaderBook extends Component{
     state = {
         book : [],
         config : {
@@ -29,16 +29,7 @@ class AdminBook extends Component{
             console.log(err.response)
         })
     }
-    deletebook=(bid)=>{
-        axios.delete('http://localhost:90/book/delete/'+bid,this.state.config)
-        .then((response)=>{
-            console.log(response.data.message)
-            window.location.reload();
-        })
-        .catch((err)=>{
-            console.log(err.response);
-        })
-    }
+
     render(){
         return(
             <div class = "viewtrend">
@@ -68,8 +59,8 @@ class AdminBook extends Component{
                         <div class = "trend-item-content">
                           <h3>{Book.Title}</h3>
                           <h4>{Book.Cost}</h4>
-                          <Link to={'/update/'+Book._id}><button type="button" class="btnupd">Edit</button></Link>
-                            <button type="button" class="btndle" onClick={this.deletebook.bind(this,Book._id)}>Delete</button>
+                          <Link to={'/read/'+Book._id}><button type="button" class="btnupd">Read</button></Link>
+                          <Link to={'/read/'+Book._id}><button type="button" class="btndle">Listen</button></Link>
                         </div>
                       </div>
                   )
@@ -81,4 +72,4 @@ class AdminBook extends Component{
         )
     }
 }
-export default AdminBook;
+export default ReaderBook;

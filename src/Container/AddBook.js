@@ -11,6 +11,8 @@ class AddProduct extends Component{
         Cost : '',
         Language: '',
         Image:'',
+        Audio:'',
+        File:'',
         config : {
             headers : {'authorization': `Bearer ${localStorage.getItem('token')}`}
         }
@@ -23,6 +25,8 @@ class AddProduct extends Component{
     }
     fileHandler = (e)=>{
         this.setState({
+            File : e.target.files[0],
+            Audio : e.target.files[0],
             Image : e.target.files[0]
         })
     }
@@ -37,6 +41,8 @@ class AddProduct extends Component{
         data.append('Cost', this.state.Cost)
         data.append('Language',this.state.Language)
         data.append('Image',this.state.Image)
+        data.append('Audio',this.state.Audio)
+        data.append('File',this.state.File)
 
         axios.post("http://localhost:90/book/insert", data,this.state.config)
         .then((response)=>{
@@ -45,9 +51,7 @@ class AddProduct extends Component{
         .catch((err)=>{
             console.log(err.response)
         })
-
     }
- 
     render(){
         return(
             <div class='formcontainer'>
@@ -70,8 +74,14 @@ class AddProduct extends Component{
                         <input type="text" name="Language" value={this.state.Language} onChange={this.inputHandler} placeholder="Language"/>     
                     </div>
                     <div class="txta">
-                        <input type="file" name="productimage" onChange={this.fileHandler} />
-                    </div>                        
+                        <input type="file" name="File" onChange={this.fileHandler} />
+                    </div>     
+                    <div class="txta">
+                        <input type="file" name="Audio" onChange={this.fileHandler} />
+                    </div>  
+                    <div class="txta">
+                        <input type="file" name="Image" onChange={this.fileHandler} />
+                    </div>                     
                     <input type="submit" class="addbtn" onClick={this.proAddMethod}></input>
                 </form>
             </div>
