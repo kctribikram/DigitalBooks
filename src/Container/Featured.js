@@ -52,7 +52,7 @@ class Featured extends Component{
                                
                                 </h6>
                                 <div class = "featuredbtns">
-                                <Link to={'/bookdetail/'+Book._id}><button type="button" class="btn btn-info">Read More</button></Link>
+                                <Link to={'/bookdetail/'+Book._id}><button type="button" class="btnfeatured">Read More</button></Link>
                                 </div>
                             </div>
                             </div>

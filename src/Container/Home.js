@@ -36,12 +36,9 @@ class Home extends Component{
                <div class="row">
                 <div class="col">
                   <h1>Digital Books</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>DigitalBooks is an online based audiobook and bookviewer
+                     service developed by Tribikram kc as a final assignment of web development that allows users to read and listen
+                      audiobooks and other forms of books or word content that are available in the market. </p>
                   <button type="button" class="btnh" onClick={() => {this.props.history.push("/book")}}>Explore</button>
                 </div>
                 <div class="col">

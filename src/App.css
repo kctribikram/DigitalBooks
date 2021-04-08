@@ -866,12 +866,13 @@ p{
   border-radius: 15px;
 }
 .featuredbtns button:last-child{
-  background: white;
-  color: var(--blackRussian);
+  background: #006dbc;
+  color: #fff;
+  margin-left: 200px;
 }
 .featuredbtns button:last-child:hover{
-  background: #006dbc;
-  color: var(--blackRussian);
+  background: #01a9ac;
+  color: #fff;
   border-color: var(--pacificBlue);
 }
 .featured-item > div{
@@ -1139,4 +1140,13 @@ footer .end{
 
 
 
-
+.btnfeatured{
+  width: 100px;
+	color: #fff;
+	font-size: 12px;
+	padding: 12px 12px;
+	background: #006dbc;
+	border: 0;
+	border-radius: 20px;
+	outline: none;
+}
