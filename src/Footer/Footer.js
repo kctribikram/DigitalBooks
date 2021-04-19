@@ -11,7 +11,9 @@ class Footer extends Component{
                 <div class="footercontent">
                     <div class="items">
                         <a href="#" class="logo">DigitalBooks</a>  
-                        <p>Loremlknknkcsdkcnskdncksnck sdncksncksdncksdncksdcnskdcnskdcnk</p>
+                        <p>DigitalBooks is an online based audiobook and bookviewer
+                     service developed by Tribikram kc as a final assignment of web development that allows users to read and listen
+                      audiobooks and other forms of books or word content that are available in the market. </p>
                         <div class="social">
                              <FaFacebookSquare className="facebook" />
                              <FaTwitterSquare className="twitter" />

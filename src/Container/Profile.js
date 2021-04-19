@@ -1,28 +1,36 @@
 import { Component,state } from "react";
-import {Container, Row , Col} from 'react-bootstrap';
-import Register from './Register';
-import Login from './Login'
-import {Route} from 'react-router-dom'
 import axios from 'axios';
+import {Link} from 'react-router-dom'
 import Header from "../Header/Header"
-import { Link } from "react-router-dom"
-import Footer from "../Footer/Footer";
-
+import { AiFillFacebook, AiFillTwitterCircle ,AiFillGithub ,AiFillYoutube} from "react-icons/all";
 
 class Profile extends Component{
+  
     state = {
-        reader : [],
-        config : {
-           headers : {'authorization' : 'Bearer ${localStorage.getItem}'}
-       }
+        Title : '',
+        Auther : '',
+        Cost : '',
+        Description:'',
+        Image : '',
+        id : this.props.match.params.id
     }
+   changeHandler = (e)=>{
+       this.setState({
+        [e.target.name] : e.target.value
+       })
+        
+   }
+   
     componentDidMount(){
-        axios.get("http://localhost:90/reader/show")
+        axios.get("http://localhost:90/user/"+ this.state.id)
         .then((response)=>{
-            console.log(response)
             this.setState({
-                reader : response.data1.data1
-            })
+                Title : response.data.Title,
+                Auther : response.data.Auther,
+                Cost : response.data.Cost,
+                Description: response.data.Description,
+                Image:response.data.Image
+            })   
         })
         .catch((err)=>{
             console.log(err.response)
@@ -30,62 +38,46 @@ class Profile extends Component{
     }
     render(){
         return(
-            <div class = "aa">
+            <div className="app">
+                 <Header></Header>
             {
-                this.state.reader.map((User) =>{
-                    return(
-                        <div class="wrapper">
-                            <div class="left">
-                                <img src="https://i.imgur.com/cMy8V5j.png" 
-                                alt="user" width="100"/>
-                                <h1>Alex William</h1>
-                                <p>UI Developer</p>
-                            </div>
-                            <div class="right">
-                                <div class="info">
-                                    <h3>Information</h3>
-                                    <div class="info_data">
-                                        <div class="data">
-                                            <h4>Email</h4>
-                                            <p>{User.email}</p>
-                                        </div>
-                                        <div class="data">
-                                        <h4>Phone</h4>
-                                            <p>0001-213-998761</p>
-                                    </div>
-                                    </div>
-                                </div>
-                            
-                            <div class="projects">
-                                    <h3>Projects</h3>
-                                    <div class="projects_data">
-                                        <div class="data">
-                                            <h4>Recent</h4>
-                                            <p>Lorem ipsum dolor sit amet.</p>
-                                        </div>
-                                        <div class="data">
-                                        <h4>Most Viewed</h4>
-                                            <p>dolor sit amet.</p>
-                                    </div>
-                                    </div>
-                                </div>
-                            
-                                <div class="social_media">
-                                    <ul>
-                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                </ul>
-                            </div>
-                            </div>
-                        </div>
-                    )
-                })
+                <div class="profile">
+                <div class="profile-header">
+                    <div class="pic">
+                    <img src="pic.png" alt=""/>
+                    </div>
+                    <div class="name">John Doe</div>
+                    <div class="desc">Developer & Designer</div>
+                    <div class="sm">
+                    <AiFillFacebook className="facebookp"/>
+                    <AiFillTwitterCircle className="twitterp"/>
+                    <AiFillGithub className="githubp"/>
+                    <AiFillYoutube className="youtubep" />
+                    </div>
+                    <a href="#" class="contact-btn">Contact Me</a>
+                </div>
+                <div class="profile-footer">
+                    <div class="numbers">
+                    <div class="item">
+                        <span>120</span>
+                        Posts
+                    </div>
+                    <div class="border"></div>
+                    <div class="item">
+                        <span>127</span>
+                        Following
+                    </div>
+                    <div class="border"></div>
+                    <div class="item">
+                        <span>120K</span>
+                        Followers
+                    </div>
+                    </div>
+                </div>
+                </div>   
             }
-    </div>
+          </div>
         )
     }
 }
 export default Profile;
-
-

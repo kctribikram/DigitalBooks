@@ -1150,3 +1150,151 @@ footer .end{
 	border-radius: 20px;
 	outline: none;
 }
+
+/* profile */
+
+
+.profile{
+
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 400px;
+  background: #f1f1f1;
+  height: 600px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.profile-header{
+  background: #2c3a47;
+  padding: 60px 40px;
+}
+
+.pic{
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(130deg, #74b9ff, #e66767);
+  margin: auto;
+  border-radius: 50%;
+  background-size: 200% 200%;
+  animation: animated-gradient 2s linear infinite;
+}
+
+
+.pic img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name{
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.desc{
+  font-size: 18px;
+  color: #e66767;
+}
+
+.sm{
+  display: flex;
+  color: #eee;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.facebookp{
+  height: 40px;
+  width: 40px;
+  color: #f1f1f1;
+  border-radius: 5px;
+  margin:10px 5px;
+  text-align: center;
+}
+.twitterp{
+  height: 40px;
+  width: 40px;
+  color: #f1f1f1;
+  border-radius: 5px;
+  margin:10px 5px;
+  text-align: center;
+}
+.youtubep{
+  height: 40px;
+  width: 40px;
+  color: #f1f1f1;
+  border-radius: 5px;
+  margin:10px 5px;
+  text-align: center;
+}
+.githubp{
+  height: 40px;
+  width: 40px;
+  color: #f1f1f1;
+  border-radius: 5px;
+  margin:10px 5px;
+  text-align: center;
+}
+.sm a{
+  color: #f2f2f2;
+  width: 56px;
+  font-size: 22px;
+  transition: .3s linear;
+}
+
+.sm a:hover{
+  color: #e66767;
+}
+
+.contact-btn{
+  display: inline-block;
+  padding: 12px 50px;
+  color: #e66767;
+  border: 2px solid #e66767;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: .3s linear;
+}
+
+.contact-btn:hover{
+  background: #e66767;
+  color: #f2f2f2;
+}
+
+.profile-footer{
+  background: #f4f4f4;
+  padding: 20px 10px;
+}
+
+.numbers{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #e66767;
+}
+
+.item span{
+  display: block;
+  color: #2c3a47;
+  font-size: 30px;
+}
+
+.border{
+  width: 1px;
+  height: 30px;
+  background: #bbb;
+}
+
