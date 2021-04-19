@@ -7,12 +7,13 @@ import { AiFillFacebook, AiFillTwitterCircle ,AiFillGithub ,AiFillYoutube} from 
 class Profile extends Component{
   
     state = {
-        Title : '',
-        Auther : '',
-        Cost : '',
-        Description:'',
-        Image : '',
-        id : this.props.match.params.id
+        first_name : '',
+        last_name : '',
+        age : '',
+        email:'',
+        contact : '',
+        location : '',
+        id : localStorage.getItem('data')
     }
    changeHandler = (e)=>{
        this.setState({
@@ -25,11 +26,12 @@ class Profile extends Component{
         axios.get("http://localhost:90/user/"+ this.state.id)
         .then((response)=>{
             this.setState({
-                Title : response.data.Title,
-                Auther : response.data.Auther,
-                Cost : response.data.Cost,
-                Description: response.data.Description,
-                Image:response.data.Image
+                first_name : response.data.reader.first_name,
+                last_name : response.data.reader.last_name,
+                age : response.data.reader.age,
+                email: response.data.reader.email,
+                contact:response.data.reader.contact,
+                location:response.data.reader.location
             })   
         })
         .catch((err)=>{
@@ -54,23 +56,16 @@ class Profile extends Component{
                     <AiFillGithub className="githubp"/>
                     <AiFillYoutube className="youtubep" />
                     </div>
-                    <a href="#" class="contact-btn">Contact Me</a>
                 </div>
                 <div class="profile-footer">
                     <div class="numbers">
-                    <div class="item">
-                        <span>120</span>
-                        Posts
-                    </div>
-                    <div class="border"></div>
-                    <div class="item">
-                        <span>127</span>
-                        Following
-                    </div>
-                    <div class="border"></div>
-                    <div class="item">
-                        <span>120K</span>
-                        Followers
+                    <div class="items">
+                        <h6>First Name: {this.state.first_name}</h6>
+                        <h6>Last Name: {this.state.last_name}</h6>
+                        <h6>Age: {this.state.age}</h6>
+                        <h6>Email: {this.state.email}</h6>
+                        <h6>Contact: {this.state.contact}</h6>
+                        <h6>Location: {this.state.location}</h6>
                     </div>
                     </div>
                 </div>

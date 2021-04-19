@@ -23,6 +23,7 @@ class Login extends Component{
 
             localStorage.setItem('token', response.data.token)
                localStorage.setItem('role', response.data.role)
+               localStorage.setItem('data', response.data.data)
                this.setState({
                    chkLogin:true
                })
