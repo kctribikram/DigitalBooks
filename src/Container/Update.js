@@ -43,6 +43,8 @@ updateData = (e)=>{
     axios.put('http://localhost:90/book/update', this.state)
     .then((response)=>{
         console.log(response)
+        this.props.history.push("/adminbook")
+        window.location.reload();
     })
     .catch((err)=>{
         console.log(err.response)
