@@ -11,7 +11,12 @@ class BookDetail extends Component{
         Cost : '',
         Description:'',
         Image : '',
-        id : this.props.match.params.id
+        book : {},
+        config : {
+            headers : {'authorization' : `Bearer ${localStorage.getItem('token')}`}
+        },
+        id : this.props.match.params.id,
+        userID : localStorage.getItem('data')
     }
    changeHandler = (e)=>{
        this.setState({
@@ -35,6 +40,36 @@ class BookDetail extends Component{
             console.log(err.response)
         })
     }
+
+    addWatchlist = (wid) =>{
+ 
+        axios.get("http://localhost:90/book/single/"+ wid)
+        .then((response)=>{
+            console.log(response.data)
+            
+             
+            const data={
+              book:response.data,
+              userid:this.state.userID
+            }
+        
+       
+        axios.post('http://localhost:90/watchlist/insert', data, this.state.config)
+        .then((response)=>{
+          console.log(data)
+            console.log(response)
+            
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
+      
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
+   
+  }
     render(){
         return(
             <div className="app">
@@ -50,7 +85,7 @@ class BookDetail extends Component{
                             <h4>{this.state.Auther}</h4>
                             <p className="description">{this.state.Description}</p>
                             <h3 className="cost">{this.state.Cost}</h3>
-                            <button className="button">Add to cart</button>
+                            <button className="button" onClick={this.addWatchlist.bind(this, this.state.id)}>Add to cart</button>
                         </div>
                     </div>
                 </div>     

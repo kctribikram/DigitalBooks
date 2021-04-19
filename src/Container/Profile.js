@@ -2,7 +2,7 @@ import { Component,state } from "react";
 import axios from 'axios';
 import {Link} from 'react-router-dom'
 import Header from "../Header/Header"
-import { AiFillFacebook, AiFillTwitterCircle ,AiFillGithub ,AiFillYoutube} from "react-icons/all";
+import { AiFillFacebook, AiFillTwitterCircle ,AiFillGithub ,AiFillYoutube, AiOutlineEdit} from "react-icons/all";
 
 class Profile extends Component{
   
@@ -45,11 +45,11 @@ class Profile extends Component{
             {
                 <div class="profile">
                 <div class="profile-header">
+                <Link to={'/updateprofile/'+this.state.id}><AiOutlineEdit className="editprofile"/></Link>
                     <div class="pic">
-                    <img src="pic.png" alt=""/>
                     </div>
-                    <div class="name">John Doe</div>
-                    <div class="desc">Developer & Designer</div>
+                    <div class="name">{this.state.first_name}</div>
+                    <div class="desc">{this.state.location}</div>
                     <div class="sm">
                     <AiFillFacebook className="facebookp"/>
                     <AiFillTwitterCircle className="twitterp"/>

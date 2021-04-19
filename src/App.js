@@ -18,6 +18,7 @@ import Read from './Container/Read';
 import ReaderBook from './Container/ReaderBook';
 import Listen from './Container/Listen';
 import Watchlist from './Container/Watchlist';
+import UpdateProfile from './Container/UpdateProfile';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/featured' component={Featured} exact/>
         <Route path='/adminbook' component={AdminBook} exact/>
         <Route path='/update/:id' component={Update} exact/>
+        <Route path='/updateprofile/:id' component={UpdateProfile} exact/>
         <Route path='/profile' component={Profile} exact/>
         <Route path='/readerbook' component={ReaderBook} exact/>
         <Route path='/watchlist' component={Watchlist} exact/>

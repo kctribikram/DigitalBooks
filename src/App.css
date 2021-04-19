@@ -1174,21 +1174,31 @@ footer .end{
   padding: 10px 10px;
 }
 
+.editprofile{
+  height: 30px;
+  width: 30px;
+  color: #f1f1f1;
+  border-radius: 5px;
+  margin-left: 330px;
+}
 .pic{
   display: inline-block;
   padding: 8px;
   background: linear-gradient(130deg, #74b9ff, #e66767);
   margin: auto;
   border-radius: 50%;
-  background-size: 200% 200%;
+  background-size: 100% 100%;
   animation: animated-gradient 2s linear infinite;
 }
+/* .profilepic{
+	background-image: url(images/book1.jpg);
+} */
 
-
-.pic img{
+.pic{
   display: block;
   width: 100px;
   height: 100px;
+  background-image: url(images/pic.png);
   border-radius: 50%;
 }
 
@@ -1281,10 +1291,9 @@ footer .end{
 
 .items{
   flex: 1;
-  text-transform: uppercase;
   font-size: 20px;
   margin: 10px 10px;
-  color: #e66767;
+  color: #000;
 }
 
 .border{
@@ -1293,3 +1302,22 @@ footer .end{
   background: #bbb;
 }
 
+.updateprofile{
+
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 400px;
+  background: #f1f1f1;
+  height: 730px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.updateprofile-header{
+  background: #2c3a47;
+  padding: 10px 10px;
+}

@@ -40,9 +40,9 @@ class Login extends Component{
             <div class='formcontainer'>
                 <form className="login-form">
                     <h1>Login</h1>
-                <div class="txtb">
-                    <input type="text" name="Username" value={this.state.Username} onChange={(event)=>{this.setState({Username:event.target.value})}} placeholder="Username"/>     
-                </div>
+                    <div class="txtb">
+                        <input type="text" name="Username" value={this.state.Username} onChange={(event)=>{this.setState({Username:event.target.value})}} placeholder="Username"/>     
+                    </div>
                     <div class="txtb">
                         <input type="password" name="Password" value={this.state.Password} onChange={(event)=>{this.setState({Password:event.target.value})}} placeholder="Password"/>
                     </div>

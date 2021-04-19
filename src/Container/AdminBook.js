@@ -44,13 +44,7 @@ class AdminBook extends Component{
             <div class = "viewtrend">
                 <Header></Header>
             <div className="bookscontainer">
-                {/* <header>
-                    <div class="inner-width">
-                    <div class="menu-icon">
-                    <BiBookAdd className="commonIcons" />
-                    </div>
-                    </div>
-                </header> */}
+
                 <div className="addicon">
                 <MdAddCircle className="add" onClick={() => {this.props.history.push("/addbook")}}/>
                 </div>

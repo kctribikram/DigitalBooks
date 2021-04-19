@@ -13,12 +13,13 @@ import { MdAddCircle } from "react-icons/all";
 class Watchlist extends Component{
     state = {
         book : [],
+        id : localStorage.getItem('data'),
         config : {
-           headers : {'authorization' : 'Bearer ${localStorage.getItem}'}
+           headers : {'authorization' : `Bearer ${localStorage.getItem('token')}`}
        }
     }
     componentDidMount(){
-        axios.get("http://localhost:90/book/show")
+        axios.get("http://localhost:90/watchlist/"+ this.state.id)
         .then((response)=>{
             console.log(response)
             this.setState({
@@ -44,13 +45,13 @@ class Watchlist extends Component{
                   return(
                       <div class = "trend-item">
                           <div className="bodyimg">
-                              <img src={`http://localhost:90/${Book.Image}`}/>     
+                              <img src={`http://localhost:90/${Book.book.Image}`}/>     
                           </div>                 
                         <div class = "trend-item-content">
-                          <h3>{Book.Title}</h3>
-                          <h4>{Book.Cost}</h4>
-                          <Link to={'/read/'+Book._id}><button type="button" class="btnupd">Read</button></Link>
-                          <Link to={'/listen/'+Book._id}><button type="button" class="btndle">Listen</button></Link>
+                          <h3>{Book.book.Title}</h3>
+                          <h4>{Book.book.Cost}</h4>
+                          <Link to={'/read/'+Book.book._id}><button type="button" class="btnupd">Read</button></Link>
+                          <Link to={'/listen/'+Book.book._id}><button type="button" class="btndle">Listen</button></Link>
                         </div>
                       </div>
                   )
