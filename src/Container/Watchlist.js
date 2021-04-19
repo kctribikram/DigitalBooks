@@ -31,6 +31,17 @@ class Watchlist extends Component{
         })
     }
 
+    deletebook=(wid)=>{
+        axios.delete('http://localhost:90/watchlist/delete/'+wid, this.state.config)
+        .then((response)=>{
+            console.log(response.data.message)
+            window.location.reload();
+        })
+        .catch((err)=>{
+            console.log(err.response);
+        })
+    }
+
     render(){
         return(
             <div class = "viewtrend">
@@ -52,6 +63,7 @@ class Watchlist extends Component{
                           <h4>{Book.book.Cost}</h4>
                           <Link to={'/read/'+Book.book._id}><button type="button" class="btnupd">Read</button></Link>
                           <Link to={'/listen/'+Book.book._id}><button type="button" class="btndle">Listen</button></Link>
+                          <button type="button" class="btnrem" onClick={this.deletebook.bind(this,Book._id)}>Remove</button>
                         </div>
                       </div>
                   )

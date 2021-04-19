@@ -1321,3 +1321,19 @@ footer .end{
   background: #2c3a47;
   padding: 10px 10px;
 }
+
+.btnrem{
+  width: 150px;
+	color: #fff;
+	font-size: 12px;
+  margin-top: 10px;
+	padding: 12px 10px;
+	background: #006dbc;
+	border: 0;
+	border-radius: 20px;
+	outline: none;
+}
+.btnrem:hover{
+  background: #de6161;
+  color: #f1f1f1;
+}
