@@ -10,7 +10,7 @@ import Featured from "./Featured";
 
 class Home extends Component{
   state = {
-      limit: 1,
+      limit: 0,
       book : [],
       config : {
          headers : {'authorization' : 'Bearer ${localStorage.getItem}'}

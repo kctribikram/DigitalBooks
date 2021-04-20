@@ -10,7 +10,7 @@ import Footer from "../Footer/Footer";
 
 class Featured extends Component{
     state = {
-        limit: 4,
+        limit: 7,
         book : [],
         config : {
            headers : {'authorization' : 'Bearer ${localStorage.getItem}'}

@@ -24,7 +24,8 @@ class Register extends Component{
             Password: this.state.Password,
         }
         axios.post("http://localhost:90/reader/register", data)
-        .then()
+        .then(this.props.history.push("/login")
+        )
         .catch(err=>{console.log(err)})
     }
     render(){

@@ -35,6 +35,8 @@ class Listen extends Component{
     }
     render(){
         return(
+            <div className="app"> 
+            <Header></Header>
                 <div className="container">
                     <div className="imgBx">
                     <img src={"http://localhost:90/" + this.state.Image}/>
@@ -47,7 +49,8 @@ class Listen extends Component{
                             </audio>
                         </div>
                     </div>
-                </div>     
+                </div>  
+            </div>   
         )
     }
 }

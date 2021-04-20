@@ -58,6 +58,8 @@ class BookDetail extends Component{
         .then((response)=>{
           console.log(data)
             console.log(response)
+            this.props.history.push("/watchlist")
+                window.location.reload();
             
         })
         .catch((err)=>{
@@ -85,7 +87,7 @@ class BookDetail extends Component{
                             <h4>{this.state.Auther}</h4>
                             <p className="description">{this.state.Description}</p>
                             <h3 className="cost">{this.state.Cost}</h3>
-                            <button className="button" onClick={this.addWatchlist.bind(this, this.state.id)}>Add to cart</button>
+                            <button className="button" onClick={this.addWatchlist.bind(this, this.state.id)}>Add to Watchlist</button>
                         </div>
                     </div>
                 </div>     

@@ -24,9 +24,8 @@ class Footer extends Component{
                     <div class="items">
                         <h3> Product</h3>
                         <ul>
-                            <li><a href="#">Chrome Extension</a></li>
-                            <li><a href="#">Email Finder</a></li>
-                            <li><a href="#">Bulk Email Finder</a></li>
+                            <li><a href="/book">Audiobook</a></li>
+                            <li><a href="/book">Digitalbook</a></li>
                         </ul>                          
                     </div>
     
